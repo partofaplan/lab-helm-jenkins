@@ -1,0 +1,19 @@
+jenkins:
+  jobs:
+    - script: >
+        pipelineJob('weathervane') {
+          definition {
+            cpsScm {
+              scm {
+                git {
+                  remote {
+                    url('https://github.com/partofaplan/weathervane-py.git')
+                    credentials('your-git-credentials-id')
+                  }
+                  branches('*/main') // Adjust branch as needed
+                  scriptPath('Jenkinsfile') // Path to your Jenkinsfile
+                }
+              }
+            }
+          }
+        }
