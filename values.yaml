@@ -1,0 +1,21 @@
+controller:
+  adminUsername: admin
+  adminPassword: admin
+
+  installPlugins:
+  - kubernetes:3937.vd7b_82db_e347b_
+  - workflow-aggregator:596.v8c21c963d92d
+  - git:5.1.0
+  - configuration-as-code:1647.ve39ca_b_829b_42
+  - github:1.37.2
+  - docker-build-step:2.9
+
+  JCasC:
+    defaultConfig: true
+    configScripts:
+      welcome-message: |
+        jenkins:
+          systemMessage: Welcome to Kube-Jenkins!
+
+  # # LOCAL ONLY:
+  # serviceType: NodePort
