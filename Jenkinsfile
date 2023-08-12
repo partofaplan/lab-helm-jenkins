@@ -4,7 +4,9 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/partofaplan/weathervane-py.git'
+                script { 
+                    git: 'https://github.com/partofaplan/weathervane-py'
+                }
             }
         }
         stage('Build Docker Image') {

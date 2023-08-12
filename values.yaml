@@ -10,13 +10,6 @@ controller:
   - github:1.37.2
   - docker-build-step:2.9
 
-  master:
-    securityRealm:
-      github:
-        clientID:
-        clientSecret:
-        accessTokenSecretName: 
-
   JCasC:
     defaultConfig: true
     configScripts:
